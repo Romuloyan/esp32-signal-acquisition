@@ -1,9 +1,9 @@
 # ESP32 Signal Acquisition, Micro-Oscilloscope and Digital Filter Analysis
 
-This portfolio project brings together two connected **Sistemas Eletrónicos** Lab 3 deliverables:
+This portfolio project brings together two **Sistemas Eletrónicos** Lab 3 deliverables:
 
 1. An embedded MicroPython application that turns an ESP32/TFT laboratory module into a small signal-acquisition instrument.
-2. A MATLAB analysis of the sampled signal using IIR and FIR digital filters.
+2. An independent MATLAB analysis of a synthetic sampled signal using IIR and FIR digital filters.
 
 The embedded application samples the ADC, converts the raw values using experimental calibration data from **Module 14**, renders the time-domain waveform, and computes a manual discrete Fourier transform (DFT) for a frequency-domain view.
 
@@ -15,7 +15,7 @@ The embedded application samples the ADC, converts the raw values using experime
 | Area | Implementation |
 | --- | --- |
 | Data acquisition | 240 ADC samples over a selectable acquisition window |
-| Calibration | Linear ADC-to-voltage conversion with a measured analogue-divider factor |
+| Calibration | Module-specific linear ADC calibration with the laboratory input-divider factor of `1 / 29.3` |
 | Embedded interface | TFT grid, waveform/spectrum drawing, status bar and button-driven controls |
 | Signal analysis | Vmax, Vmin, mean, RMS and a manually calculated DFT |
 | Data export | Optional email of the most recent acquisition through the laboratory display library |
@@ -45,7 +45,7 @@ The code is hardware-specific; a desktop Python interpreter can check its syntax
 
 ## Calibration
 
-The values embedded in `src/main.py` come from five bench measurement points on **Module 14**, each based on 10,000 ADC samples. The clean measurement summary and the equations used are in [docs/calibration.md](docs/calibration.md).
+The values embedded in `src/main.py` come from five bench measurement points on **Module 14**, each based on 10,000 ADC samples. The full measurement table, regression and all experimental captures retained from the report are in [docs/micro-oscilloscope-results.md](docs/micro-oscilloscope-results.md); the conversion equations are in [docs/calibration.md](docs/calibration.md).
 
 ## Digital-filter analysis
 
@@ -72,7 +72,7 @@ assets/                Laboratory photographs and analysis figures without perso
 
 ## Academic provenance
 
-Developed as a academic project for **Sistemas Eletrónicos** at Instituto Superior Técnico. This is a cleaned portfolio presentation of the embedded application; it intentionally excludes course handouts, course-supplied library code, raw backups, reports and files containing personal data. 
+Developed by a three-person team as an academic project for **Sistemas Eletrónicos** at Instituto Superior Técnico. This is a cleaned portfolio presentation of the embedded application; it intentionally excludes course handouts, course-supplied library code, raw backups, reports and files containing personal data. It is not presented as a solo project.
 
 ## Verification performed for this portfolio version
 

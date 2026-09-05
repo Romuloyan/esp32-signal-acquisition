@@ -5,4 +5,9 @@ __pycache__/
 *.pdf
 *.odt
 *.zip
+*.csv
+*.mlx
 .vscode/
+T_Display.py
+T_Simulator.py
+arial_16.py
