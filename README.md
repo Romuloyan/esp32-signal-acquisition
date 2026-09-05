@@ -72,7 +72,7 @@ assets/                Laboratory photographs and analysis figures without perso
 
 ## Academic provenance
 
-Developed by a three-person team as an academic project for **Sistemas Eletrónicos** at Instituto Superior Técnico. This is a cleaned portfolio presentation of the embedded application; it intentionally excludes course handouts, course-supplied library code, raw backups, reports and files containing personal data. It is not presented as a solo project.
+Developed by a three-person team as an academic project for **Sistemas Eletrónicos** at Instituto Superior Técnico. This is a cleaned portfolio presentation of the embedded application; it intentionally excludes course handouts, course-supplied library code, raw backups, reports and files containing personal data.
 
 ## Verification performed for this portfolio version
 
